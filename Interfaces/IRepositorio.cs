@@ -9,7 +9,7 @@ namespace APPSERIES.Interfaces
          void Insere(T entidade);
          void Excluir(int id);
          void Atualizar(int id, T entidade);
-         int Proximo();
+         int ProximoId();
 
 
 

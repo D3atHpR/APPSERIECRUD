@@ -4,6 +4,7 @@ using APPSERIES.Interfaces;
 using APPSERIES.Classes;
 
 
+
 namespace APPSERIES
 {
     public class SerieRepositorio : IRepositorio<Series>
@@ -19,14 +20,14 @@ namespace APPSERIES
             listaSerie[id].Excluir();
         }
 
-        public void Insere(Series entidade)
+        public void Insere(Series objeto)
         {
-            throw new NotImplementedException();
+            listaSerie.Add(objeto);
         }
 
         public List<Series> Lista()
         {
-            throw new NotImplementedException();
+            return listaSerie;
         }
 
         public int Proximo()
@@ -34,9 +35,14 @@ namespace APPSERIES
             throw new NotImplementedException();
         }
 
+        public int ProximoId()
+        {
+            return listaSerie.Cout;
+        }
+
         public Series RetornaPorId(int id)
         {
-            throw new NotImplementedException();
+            return listaSerie[id];
         }
     }
 }
